@@ -41,14 +41,13 @@ export default function App() {
     <TouchableWithoutFeedback
       onPress={() => {
         Keyboard.dismiss();
-        console.log('dismissed keyboard');
       }}
     >
       <View style={styles.container}>
         <Header />
         <View style={styles.content}>
           <AddTodo submitHandler={submitHandler} />
-          <View styles={styles.list}>
+          <View style={styles.list}>
             <FlatList
               data={todos}
               renderItem={({ item }) => (
@@ -69,8 +68,10 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 40,
+    flex: 1,
   },
   list: {
+    flex: 1,
     marginTop: 20,
   },
 });
