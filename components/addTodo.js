@@ -5,7 +5,9 @@ export default function addTodo({ submitHandler }) {
   const [text, setText] = useState('');
 
   const changeHandler = (val) => {
-    setText(val);
+    const firstLetterCap = val.charAt(0).toUpperCase() + val.slice(1);
+
+    setText(firstLetterCap);
   };
 
   return (
